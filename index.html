@@ -4,10 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>¡Nos Casamos! Carolina & José Antonio</title>
+
+  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Simonetta:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2e0e6ad04.js" crossorigin="anonymous"></script>
   <style>
+    @font-face {
+      font-family: 'Brittany';
+      src: url('https://raw.githubusercontent.com/bugatti17/NosCasamos-v2/refs/heads/main/BrittanySignature.ttf') format('truetype');
+    }
+
     body {
       margin: 0;
       font-family: 'Simonetta', serif;
@@ -17,32 +23,39 @@
       text-align: center;
       padding: 20px;
     }
+
     .container {
-      background-color: rgba(255, 255, 255, 0.85);
+      background-color: rgba(255, 255, 255, 0.88);
       border-radius: 20px;
       padding: 25px;
       max-width: 720px;
       margin: auto;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
+
     h1 {
-      font-family: 'Simonetta', serif;
-      font-size: 40px;
-      margin: 0;
-      font-weight: 700;
+      font-family: 'Brittany', cursive;
+      font-size: 50px;
+      margin: 10px 0 20px;
     }
+
     .names {
-      font-size: 32px;
+      font-family: 'Brittany', cursive;
+      font-size: 38px;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 12px;
-      margin: 10px 0 30px;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 25px;
     }
-    .names i {
-      font-size: 20px;
-      color: #c58f63;
+
+    .names svg {
+      width: 30px;
+      height: 30px;
+      fill: #c58f63;
     }
+
     img.photo {
       width: 100%;
       max-height: 400px;
@@ -50,15 +63,27 @@
       border-radius: 12px;
       margin: 20px 0;
     }
+
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .nowrap {
+      white-space: nowrap;
+    }
+
     .countdown {
       font-size: 24px;
       background: #fff2e6;
-      padding: 12px;
-      margin: 20px auto;
-      border-radius: 12px;
+      padding: 14px 20px;
+      margin: 25px auto;
+      border-radius: 16px;
       display: inline-block;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      border: 2px dashed #c58f63;
     }
+
     .locations a {
       display: block;
       color: #6b4e3d;
@@ -71,9 +96,11 @@
       font-weight: bold;
       transition: all 0.3s ease;
     }
+
     .locations a:hover {
       background: #e0cabb;
     }
+
     .rsvp-button {
       display: flex;
       justify-content: center;
@@ -89,9 +116,11 @@
       margin: 10px auto;
       transition: all 0.3s ease;
     }
+
     .rsvp-button:hover {
       background: #1ebe5b;
     }
+
     .quote {
       font-style: italic;
       margin-top: 30px;
@@ -100,22 +129,28 @@
   </style>
 </head>
 <body>
-  <div class="container" data-aos="fade-up">
+  <div class="container">
     <h1>¡Nos Casamos!</h1>
+
     <div class="names">
       <span>Carolina</span>
-      <i class="fas fa-heart"></i>
-      <i class="fas fa-plane-departure"></i>
+      <!-- Ícono decorativo SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M22,4c-2.2,0-4.2,1.2-5.4,3c-1.2-1.8-3.2-3-5.4-3C8.1,4,6,6.1,6,8.6c0,4.3,6,9.3,6,9.3s6-4.9,6-9.3C18,6.1,15.9,4,13.4,4z"/>
+        <path d="M13.8,9l8.2-3l-1.5,2.7L23,10l-7.7-1.6L13.8,9z" />
+      </svg>
       <span>José Antonio</span>
     </div>
-    <img src="foto_novios.jpg" alt="Foto de los novios" class="photo" data-aos="zoom-in" />
-    <p>La ceremonia tendrá lugar el <strong>27 de septiembre de 2025</strong><br>
+
+    <img src="foto_novios.jpg" alt="Foto de los novios" class="photo" />
+
+    <p>La ceremonia tendrá lugar el <strong class="nowrap">27 de septiembre de 2025</strong><br>
     a las <strong>12:30h</strong> en la <strong>Iglesia de la Inmaculada Concepción</strong> (La Carolina, Jaén).<br>
     Después lo celebraremos en <strong>Hacienda la Masía</strong>, una finca preciosa rodeada de naturaleza.</p>
 
-    <div class="countdown" id="countdown" data-aos="fade-up"></div>
+    <div class="countdown" id="countdown"></div>
 
-    <div class="locations" data-aos="fade-up">
+    <div class="locations">
       <a href="https://maps.google.com/?q=Iglesia+de+la+Inmaculada+Concepción,+La+Carolina,+Jaén" target="_blank">
         📍 Iglesia de la Inmaculada Concepción
       </a>
@@ -134,9 +169,7 @@
     <p class="quote">"El amor es el mejor guía para cualquier viaje"</p>
   </div>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
     const countdown = document.getElementById('countdown');
     const targetDate = new Date('2025-09-27T12:30:00');
     function updateCountdown() {
