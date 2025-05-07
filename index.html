@@ -3,95 +3,140 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carolina & José Antonio - ¡Nos Casamos!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <title>¡Nos Casamos! Carolina & José Antonio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Simonetta:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0e6ad04.js" crossorigin="anonymous"></script>
   <style>
     body {
       margin: 0;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Simonetta', serif;
       background: url('fondo_mapa.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #3b2d2d;
+      color: #3c2f2f;
       text-align: center;
       padding: 20px;
     }
     .container {
       background-color: rgba(255, 255, 255, 0.85);
-      border-radius: 16px;
-      padding: 20px;
-      max-width: 700px;
+      border-radius: 20px;
+      padding: 25px;
+      max-width: 720px;
       margin: auto;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      animation: fadeIn 2s ease-in;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
     h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      margin-bottom: 0;
+      font-family: 'Simonetta', serif;
+      font-size: 40px;
+      margin: 0;
+      font-weight: 700;
     }
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      margin-top: 5px;
-      margin-bottom: 20px;
+    .names {
+      font-size: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin: 10px 0 30px;
     }
-    .photo {
+    .names i {
+      font-size: 20px;
+      color: #c58f63;
+    }
+    img.photo {
       width: 100%;
       max-height: 400px;
       object-fit: cover;
       border-radius: 12px;
-      margin-bottom: 20px;
-      animation: fadeIn 3s ease-in;
+      margin: 20px 0;
     }
     .countdown {
-      font-size: 22px;
-      margin: 15px 0;
-      font-weight: bold;
-    }
-    .locations a, .rsvp-button {
-      display: block;
-      background-color: #a67856;
-      color: white;
+      font-size: 24px;
+      background: #fff2e6;
       padding: 12px;
-      margin: 10px 0;
-      border-radius: 8px;
+      margin: 20px auto;
+      border-radius: 12px;
+      display: inline-block;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
+    .locations a {
+      display: block;
+      color: #6b4e3d;
+      background: #f5e7da;
+      margin: 10px auto;
+      max-width: 300px;
+      padding: 12px;
+      border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
-      transition: background-color 0.3s;
+      transition: all 0.3s ease;
     }
-    .locations a:hover, .rsvp-button:hover {
-      background-color: #8d6045;
+    .locations a:hover {
+      background: #e0cabb;
+    }
+    .rsvp-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      background: #25d366;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 40px;
+      font-weight: bold;
+      width: fit-content;
+      margin: 10px auto;
+      transition: all 0.3s ease;
+    }
+    .rsvp-button:hover {
+      background: #1ebe5b;
     }
     .quote {
       font-style: italic;
       margin-top: 30px;
       font-size: 20px;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>¡NOS CASAMOS!</h1>
-    <h2>Carolina & José Antonio</h2>
-    <img src="foto_novios.jpg" alt="Foto de los novios" class="photo" />
-    <p>La ceremonia tendrá lugar el día <strong>27 de septiembre de 2025</strong><br>
-    a las <strong>12:30 horas</strong> en la <strong>Iglesia de la Inmaculada Concepción</strong><br>
-    (La Carolina, Jaén).<br>
-    A continuación, disfrutaremos todos juntos en la <strong>Hacienda la Masía</strong>.</p>
-    <div class="countdown" id="countdown"></div>
-    <div class="locations">
-      <a href="https://maps.google.com/?q=Iglesia+de+la+Inmaculada+Concepción,+La+Carolina,+Jaén" target="_blank">📍 Ver Iglesia en Google Maps</a>
-      <a href="https://maps.google.com/?q=Hacienda+la+Masía,+Jaén" target="_blank">🏛️ Ver Hacienda en Google Maps</a>
+  <div class="container" data-aos="fade-up">
+    <h1>¡Nos Casamos!</h1>
+    <div class="names">
+      <span>Carolina</span>
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-plane-departure"></i>
+      <span>José Antonio</span>
     </div>
-    <a href="https://wa.me/34690298600" class="rsvp-button" target="_blank">Confirmar asistencia a Carolina</a>
-    <a href="https://wa.me/34671626965" class="rsvp-button" target="_blank">Confirmar asistencia a José Antonio</a>
+    <img src="foto_novios.jpg" alt="Foto de los novios" class="photo" data-aos="zoom-in" />
+    <p>La ceremonia tendrá lugar el <strong>27 de septiembre de 2025</strong><br>
+    a las <strong>12:30h</strong> en la <strong>Iglesia de la Inmaculada Concepción</strong> (La Carolina, Jaén).<br>
+    Después lo celebraremos en <strong>Hacienda la Masía</strong>, una finca preciosa rodeada de naturaleza.</p>
+
+    <div class="countdown" id="countdown" data-aos="fade-up"></div>
+
+    <div class="locations" data-aos="fade-up">
+      <a href="https://maps.google.com/?q=Iglesia+de+la+Inmaculada+Concepción,+La+Carolina,+Jaén" target="_blank">
+        📍 Iglesia de la Inmaculada Concepción
+      </a>
+      <a href="https://maps.google.com/?q=Hacienda+la+Masía,+Jaén" target="_blank">
+        🌿 Hacienda la Masía
+      </a>
+    </div>
+
+    <a href="https://wa.me/34690298600" class="rsvp-button" target="_blank">
+      <i class="fab fa-whatsapp"></i> Confirmar a Carolina
+    </a>
+    <a href="https://wa.me/34671626965" class="rsvp-button" target="_blank">
+      <i class="fab fa-whatsapp"></i> Confirmar a José Antonio
+    </a>
+
     <p class="quote">"El amor es el mejor guía para cualquier viaje"</p>
   </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init();
     const countdown = document.getElementById('countdown');
     const targetDate = new Date('2025-09-27T12:30:00');
     function updateCountdown() {
