@@ -41,19 +41,18 @@
 
     .names {
       font-family: 'Brittany', cursive;
-      font-size: 38px;
+      font-size: 36px;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
       margin-bottom: 25px;
     }
 
-    .names svg {
-      width: 30px;
-      height: 30px;
-      fill: #c58f63;
+    .names img {
+      height: 40px;
+      vertical-align: middle;
     }
 
     img.photo {
@@ -75,13 +74,25 @@
 
     .countdown {
       font-size: 24px;
-      background: #fff2e6;
-      padding: 14px 20px;
+      background: #fff8f0;
+      padding: 16px 24px;
       margin: 25px auto;
-      border-radius: 16px;
+      border-radius: 18px;
       display: inline-block;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
       border: 2px dashed #c58f63;
+      position: relative;
+    }
+
+    .countdown::before {
+      content: '⏳';
+      position: absolute;
+      top: -12px;
+      left: -12px;
+      font-size: 24px;
+      background: #fff8f0;
+      border-radius: 50%;
+      padding: 4px;
     }
 
     .locations a {
@@ -102,18 +113,17 @@
     }
 
     .rsvp-button {
-      display: flex;
-      justify-content: center;
+      display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       background: #25d366;
       color: white;
       text-decoration: none;
-      padding: 12px 20px;
+      padding: 12px 22px;
       border-radius: 40px;
       font-weight: bold;
-      width: fit-content;
-      margin: 10px auto;
+      margin: 12px;
+      font-size: 18px;
       transition: all 0.3s ease;
     }
 
@@ -134,11 +144,7 @@
 
     <div class="names">
       <span>Carolina</span>
-      <!-- Ícono decorativo SVG -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M22,4c-2.2,0-4.2,1.2-5.4,3c-1.2-1.8-3.2-3-5.4-3C8.1,4,6,6.1,6,8.6c0,4.3,6,9.3,6,9.3s6-4.9,6-9.3C18,6.1,15.9,4,13.4,4z"/>
-        <path d="M13.8,9l8.2-3l-1.5,2.7L23,10l-7.7-1.6L13.8,9z" />
-      </svg>
+      <img src="https://raw.githubusercontent.com/bugatti17/NosCasamos-v2/f2e18936792f4ea31199a8f6c1f41b0a3fcff902/Avión_Canva.png" alt="Decoración" />
       <span>José Antonio</span>
     </div>
 
