@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carolina & José Antonio - ¡Nos Casamos!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      background: url('fondo_mapa.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #3b2d2d;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 16px;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 2s ease-in;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 0;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+    .photo {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      animation: fadeIn 3s ease-in;
+    }
+    .countdown {
+      font-size: 22px;
+      margin: 15px 0;
+      font-weight: bold;
+    }
+    .locations a, .rsvp-button {
+      display: block;
+      background-color: #a67856;
+      color: white;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .locations a:hover, .rsvp-button:hover {
+      background-color: #8d6045;
+    }
+    .quote {
+      font-style: italic;
+      margin-top: 30px;
+      font-size: 20px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>¡NOS CASAMOS!</h1>
+    <h2>Carolina & José Antonio</h2>
+    <img src="foto_novios.jpg" alt="Foto de los novios" class="photo" />
+    <p>La ceremonia tendrá lugar el día <strong>27 de septiembre de 2025</strong><br>
+    a las <strong>12:30 horas</strong> en la <strong>Iglesia de la Inmaculada Concepción</strong><br>
+    (La Carolina, Jaén).<br>
+    A continuación, disfrutaremos todos juntos en la <strong>Hacienda la Masía</strong>.</p>
+    <div class="countdown" id="countdown"></div>
+    <div class="locations">
+      <a href="https://maps.google.com/?q=Iglesia+de+la+Inmaculada+Concepción,+La+Carolina,+Jaén" target="_blank">📍 Ver Iglesia en Google Maps</a>
+      <a href="https://maps.google.com/?q=Hacienda+la+Masía,+Jaén" target="_blank">🏛️ Ver Hacienda en Google Maps</a>
+    </div>
+    <a href="https://wa.me/34690298600" class="rsvp-button" target="_blank">Confirmar asistencia a Carolina</a>
+    <a href="https://wa.me/34671626965" class="rsvp-button" target="_blank">Confirmar asistencia a José Antonio</a>
+    <p class="quote">"El amor es el mejor guía para cualquier viaje"</p>
+  </div>
+  <script>
+    const countdown = document.getElementById('countdown');
+    const targetDate = new Date('2025-09-27T12:30:00');
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+      if (diff <= 0) {
+        countdown.textContent = "¡Ha llegado el gran día!";
+        return;
+      }
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / (1000 * 60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+      countdown.textContent = `Faltan ${d} días, ${h}h ${m}m ${s}s`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
